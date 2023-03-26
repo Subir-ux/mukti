@@ -34,6 +34,7 @@
       e.stopImmediatePropagation();
       navbar.toggleClass("slideInn");
       $("body").toggleClass("overflow-hidden");
+      $("body").toggleClass("customContact");
       //  $(this).addClass("d-none");
       return false;
     });
@@ -435,6 +436,23 @@ var swiper = new Swiper(".countSlider", {
     });
 }
 
+
+// For counter up js fixing start
+var c = function() {
+  if (!$(t.data('counterup-nums'))) {
+  return;
+  }
+  $(t.text(t.data("counterup-nums").shift()));
+  if (t.data("counterup-nums").length) setTimeout(t.data("counterup-func"), r.delay);
+  else {
+  delete t.data("counterup-nums");
+  t.data("counterup-nums", null);
+  t.data("counterup-func", null)
+  }
+  };
+
+// For counter up js fixing end
+
 //daily activities-slider
 
 var swiper = new Swiper(".dailyActivitiesSlider", {
@@ -605,90 +623,43 @@ var swiper = new Swiper(".acredationSlider", {
 });
 
 // Gallery grid
-
-// gallery masonry - start
-  // --------------------------------------------------
-  // init Isotope
-  var $grid = $(".grid").isotope({
-    itemSelector: ".element-item",
-    layoutMode: "fitRows"
-  });
-  // filter functions
-  var filterFns = {
-    // show if number is greater than 50
-    numberGreaterThan50: function() {
-      var number = $(this)
-      .find(".number")
-      .text();
-      return parseInt(number, 10) > 50;
+  $('#portfolio').mixItUp({  
+    load: {
+      filter: '.imagecards'
     },
-    // show if name ends with -ium
-    ium: function() {
-      var name = $(this)
-      .find(".name")
-      .text();
-      return name.match(/ium$/);
-    }
-  };
-  // bind filter button click
-  $(".filters-button-group").on("click", "button", function() {
-    var filterValue = $(this).attr("data-filter");
-    // use filterFn if matches value
-    filterValue = filterFns[filterValue] || filterValue;
-    $grid.isotope({ filter: filterValue });
-  });
-  // change is-checked class on buttons
-  $(".button-group").each(function(i, buttonGroup) {
-    var $buttonGroup = $(buttonGroup);
-    $buttonGroup.on("click", "button", function() {
-      $buttonGroup.find(".is-checked").removeClass("is-checked");
-      $(this).addClass("is-checked");
-    });
-  });
-
-  var $grid = $('.grid').isotope({
-    percentPosition: true,
-    itemSelector: '.grid-item',
-    masonry: {
-      columnWidth: '.grid-sizer'
-    }
-  });
-  // layout Isotope after each image loads
-  $grid.imagesLoaded().progress( function() {
-    $grid.isotope('layout');
-  });
-  // gallery masonry - end
-  // --------------------------------------------------
-
-
-
-// gallery popup - start
-  // --------------------------------------------------
-  $('.zoom-gallery').magnificPopup({
-    type: 'image',
-    closeBtnInside: false,
-    delegate: '.popup-link',
-    closeOnContentClick: false,
-    mainClass: 'mfp-with-zoom mfp-img-mobile',
-    gallery: {
-      enabled: true
+    selectors: {
+      target: '.tile',
+      filter: '.filter',
+      sort: '.sort-btn'
     },
-    zoom: {
-      enabled: true,
-      duration: 300, // don't foget to change the duration also in CSS
-      opener: function(element) {
-        return element.find('img');
+    classNames: 'subir',
+        animation: {
+        animateResizeContainer: false,
+        effects: 'fade scale',
       }
-    }
+  
   });
-  $('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
-    disableOn: 700,
-    type: 'iframe',
-    preloader: true,
-    mainClass: 'play-icon',
-    fixedContentPos: true
-  });
-  // gallery popup - end
-  // --------------------------------------------------
+
+
+
+
+  // Fancybox Config
+$('[data-fancybox="gallery"]').fancybox({
+  buttons: [
+    "slideShow",
+    "thumbs",
+    "zoom",
+    "fullScreen",
+    "share",
+    "close"
+  ],
+  loop: false,
+  protect: true,
+});
+
+
+
+
+
 
 })(jQuery);

@@ -29,6 +29,9 @@
     top: auto;
     justify-content: center;
   }
+  .swiper-slider-container::before {
+    width: 100%;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
@@ -37,6 +40,9 @@
   }
   .footer-widget .footer-menu-column li {
     text-align: left;
+  }
+  .swiper-slider-container::before {
+    width: 70%;
   }
 }
 
@@ -52,6 +58,28 @@
   }
   .news-letter .newsletter-submit-btn {
     right: 6px;
+  }
+  .features-activities-title {margin-bottom: 20px;}
+  .feature-activity-content-right {
+    margin-top:30px;
+  }
+  .stories-count-daily-activities-sec .swiper-slider-container {
+    padding:30px 30px 40px;
+  }
+  .filter-button-wrapper {
+    margin-top:23px;
+  }
+  .daily-activities-slider .card-body{
+    padding-bottom: 50px;
+  }
+  .home-banner-carousel .home-banner-slide .home-banner-box .image-video-box {
+    width: 90%; 
+    height: 356px;
+    -webkit-transform: scale(1.02);
+    transform: scale(1.02);
+  }
+  .common-section-title-head {
+    font-size: 34px;
   }
 }
 
@@ -70,11 +98,41 @@
   .footer-widget .footer-menu-column li:last-child{
     margin-bottom: 0px;
   }
+  .features-activities-title {margin-bottom: 70px;}
+  .home-banner-carousel .home-banner-slide .home-banner-box .image-video-box {
+    height: 72vh;
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+  .swiper-slider-container::before {
+    width: 530px;
+  }
+  .common-section-title-head {
+    font-size: 42px;
+  }
+}
+
+@media (min-width: 1500px) {
+  .news-letter .newsletter-submit-btn {
+    right: 50px;
+  }
 }
 
 @media (min-width: 1600px) {
   .custom-container {
     max-width: calc(100% - 150px);
+  }
+}
+
+@media (min-width: 1700px) {
+  .news-letter .newsletter-submit-btn {
+    right: 55px;
+  }
+}
+
+@media (min-width: 1800px) {
+  .news-letter .newsletter-submit-btn {
+    right: 60px;
   }
 }
 
@@ -90,12 +148,14 @@
     background-color: #0a2647;
     padding: 80px 0;
   }
+  .features-activities-title {margin-bottom: 90px;}
+
+  .news-letter .newsletter-submit-btn {
+    right: 67px;
+  }
 }
 
 @media (min-width: 1920px) {
-  .news-letter .newsletter-submit-btn {
-    right: 49px;
-  }
   .news-letter .form-control {
     height: 50px;
   }
