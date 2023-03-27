@@ -624,57 +624,6 @@ var swiper = new Swiper(".acredationSlider", {
 });
 
 // Gallery grid
-  $('#portfolio').mixItUp({  
-    load: {
-      filter: '.imagecards'
-    },
-    selectors: {
-      target: '.tile',
-      filter: '.filter',
-      sort: '.sort-btn'
-    },
-    classNames: 'subir',
-        animation: {
-        animateResizeContainer: false,
-        effects: 'fade scale',
-      }
-  
-  });
-
-
-
-
-  // Fancybox Config
-$('[data-fancybox="gallery"]').fancybox({
-  buttons: [
-    "slideShow",
-    "thumbs",
-    "zoom",
-    "fullScreen",
-    "share",
-    "close"
-  ],
-  loop: false,
-  protect: true,
-});
-
-  // Gallery grid
-
-  // function galleryFilterInit() {
-  //   $('.list').click(function(){
-  //     const value = $(this).attr('data-filter');
-  //     if (value == 'image'){
-  //       $('.item-box').show('1000');
-  //     }else{
-  //       $('.item-box').not('.'+value).hide('1000');
-  //       $('.item-box').filter('.'+value).show('1000');
-  //     }
-  //   });
-
-  //   $('.list').click(function(){
-  //     $(this).addClass('active').siblings().removeClass('active');
-  //   });
-  // }
   function galleryFilterInit() {
     $('.tab-a').click(function(){  
       $(".tab").removeClass('tab-active');
@@ -683,8 +632,5 @@ $('[data-fancybox="gallery"]').fancybox({
       $(this).parent().find(".tab-a").addClass('active-a');
      });
   }
-
-
-
 
 })(jQuery);
