@@ -3329,6 +3329,66 @@ h6 {
     break-inside: avoid;
     width: 100%;
 }
+
+.product-image.product .item-box a{ 
+  display: inline-block;
+}
+
+.product-image.product .item-box {
+  transition: 0.3s;
+  position: relative;
+  /* overflow: hidden; */
+  z-index: 1;
+}
+
+.product-image.product .item-box .portfolio-info{ 
+  opacity: 0;
+  position: absolute;
+  top: 10%;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 3;
+  transition: all ease-in-out 0.3s;
+}
+
+.product-image.product .item-box .portfolio-info{ 
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  color: #fff;
+  font-weight: 600;
+}
+
+.product-image.product .item-box:hover .portfolio-info{ 
+  opacity: 1;
+  top: calc(50% - 10px);
+}
+
+.product-image.product .item-box::before {
+  content: "";
+  position: absolute;
+  left: 30px;
+  right: 30px;
+  top: 30px;
+  bottom: 30px;
+  transition: all ease-in-out 0.3s;
+  z-index: 2;
+  opacity: 0;
+  background: -moz-linear-gradient(top,  rgba(238,250,255,0) 0%, rgba(2,174,255,0.65) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  rgba(238,250,255,0) 0%,rgba(2,174,255,0.65) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  rgba(238,250,255,0) 0%,rgba(2,174,255,0.65) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00eefaff', endColorstr='#a602aeff',GradientType=0 ); /* IE6-9 */
+
+}
+
+.product-image.product .item-box:hover::before {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 1;
+}
+
 .product .item-box iframe{ 
   border-radius: 10px;
   width: 100%;
@@ -3343,6 +3403,8 @@ h6 {
 .video-product .item-box{ 
   margin-bottom: 2px;
 }
+
+
 
   /* @media (min-width: 320px) {
     .product {
