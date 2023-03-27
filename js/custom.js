@@ -11,6 +11,7 @@
     toggleMobileNavigation();
     modalSearchBackdrop();
     counterUpInit();
+    galleryFilterInit();
     // navstickyHeader();
     // stickyContactBtn();
   });
@@ -657,7 +658,31 @@ $('[data-fancybox="gallery"]').fancybox({
   protect: true,
 });
 
+  // Gallery grid
 
+  // function galleryFilterInit() {
+  //   $('.list').click(function(){
+  //     const value = $(this).attr('data-filter');
+  //     if (value == 'image'){
+  //       $('.item-box').show('1000');
+  //     }else{
+  //       $('.item-box').not('.'+value).hide('1000');
+  //       $('.item-box').filter('.'+value).show('1000');
+  //     }
+  //   });
+
+  //   $('.list').click(function(){
+  //     $(this).addClass('active').siblings().removeClass('active');
+  //   });
+  // }
+  function galleryFilterInit() {
+    $('.tab-a').click(function(){  
+      $(".tab").removeClass('tab-active');
+      $(".tab[data-id='"+$(this).attr('data-id')+"']").addClass("tab-active");
+      $(".tab-a").removeClass('active-a');
+      $(this).parent().find(".tab-a").addClass('active-a');
+     });
+  }
 
 
 
