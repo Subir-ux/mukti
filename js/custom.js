@@ -21,8 +21,6 @@
     chartInitIntdev();
     chartInitDisasterManagement();
     scrollToTop();
-    imageZoomOut();
-    onloadZoomAdd();
   });
 
   // Toggle mobile navigation

@@ -3064,14 +3064,21 @@ h6 {
 /* Gallery grid start */
 
 /* Gallery grid end */
-
+@media (max-width:991px){
+  .tab-menu-wrap {
+    width:100%;
+  }
+}
+@media (min-width:992px){
+  .tab-menu-wrap {
+    width:30%;
+  }
+}
 .tab-menu-wrap {
-  /* margin: auto; */
   background: #fffefe;
   box-shadow: 5px 5px 50px rgba(2, 174, 255, 0.2);
   border-radius: 50px;
   margin-bottom: 20px;
-  width: 30%;
 }
 .product {
   column-count: 3;
