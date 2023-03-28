@@ -47,6 +47,9 @@
 }
 
 @media (max-width: 991px) {
+  .feature-slide-content {
+    height: 300px;
+  }
   .footer-widget {
     text-align: center;
   }
@@ -84,6 +87,9 @@
 }
 
 @media (min-width: 992px) {
+  .feature-slide-content {
+    height: 400px;
+  }
   .px--15 {
     margin-left: -15px !important;
     margin-right: -15px !important;
@@ -127,6 +133,9 @@
 @media (min-width: 1700px) {
   .news-letter .newsletter-submit-btn {
     right: 55px;
+  }
+  .footer-widget .footer-menu-column li a{
+    font-size: 16px;
   }
 }
 
