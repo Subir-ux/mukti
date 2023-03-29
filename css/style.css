@@ -1358,7 +1358,7 @@ h6 {
 }
 @media (max-width: 991px) {
   .autoplay-progress {
-    bottom: -2rem;
+    bottom: 1.5rem;
     left: 6%;
   }
 }
@@ -1555,7 +1555,7 @@ h6 {
 
 @media (max-width: 1199px) {
   .home-banner-carousel .home-banner-button {
-    bottom: -3rem;
+    bottom: -1rem;
     right: 1rem;
     top: auto !important;
     left: auto;
@@ -1575,7 +1575,7 @@ h6 {
   }
   .home-banner-carousel .swiper,
   .home-banner-carousel .swiper-container {
-    overflow: visible;
+    padding-bottom:30px;
   }
 }
 @media (min-width: 1200px) {
